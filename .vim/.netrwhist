@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/luke/TweetDeck/tweetdeck-analytics/dashboard'
+let g:netrw_dirhist_2='/home/luke/git/HybridCluster'
+let g:netrw_dirhist_3='/home/luke/TweetDeck/Twisted/trunk'
+let g:netrw_dirhist_4='/home/luke/git/HybridDeployment'
+let g:netrw_dirhist_5='/etc/apache2/sites-available'
+let g:netrw_dirhist_6='/home/luke/TweetDeck/tweetdeck-analytics/dashboard'
+let g:netrw_dirhist_7='/home/luke/TweetDeck/tweetdeck-analytics/dashboard/backend'
