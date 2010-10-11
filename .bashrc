@@ -125,6 +125,7 @@ alias node1='ssh hybrid@node1.digital-crocus.com'
 alias node2='ssh luke@node2.digital-crocus.com'
 alias node3='ssh hybrid@node3.digital-crocus.com'
 alias node0='ssh luke@node0.hybridcluster.net'
+alias buildslave='ssh luke@buildslave.hybridcluster.net'
 
 alias node4='ssh hybrid@91.209.244.194'
 alias node5='ssh hybrid@91.209.244.195'
@@ -160,4 +161,7 @@ export WEB_REPO=$HOME/TweetDeck/tweetdeck-web
 
 export DJANGO_SETTINGS_MODULE=tweetdecksite.settings
 export PYTHONPATH=$HOME/TweetDeck/tweetdeck-common:$HOME/TweetDeck/tweetdeck-api:$HOME/TweetDeck/tweetdeck-backend:$HOME/TweetDeck/tweetdeck-analytics:$HOME/TweetDeck/tweetdeck-web:$HOME/TweetDeck/tweetdeck-analytics
-source ~/TweetDeck/tweetdeck-api/access_keys.sh
+
+if [ -f ~/TweetDeck/tweetdeck-api/access_keys.sh ]; then
+    source ~/TweetDeck/tweetdeck-api/access_keys.sh
+fi
