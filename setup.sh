@@ -12,11 +12,11 @@ ln -s luke-vimrc/.vimrc
 if [ -d .vim ]; then
     mv .vim .vim.backup
 fi
-ln -s luke-vim/.vim
+ln -s luke-vimrc/.vim
 
 if [ -f .inputrc ]; then
     mv .inputrc .inputrc.backup
 fi
-ln -s luke-inputrc/.inputrc
+ln -s luke-vimrc/.inputrc
 
 
