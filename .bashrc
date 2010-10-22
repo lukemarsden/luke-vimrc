@@ -150,6 +150,7 @@ alias monitorsv1='ssh simpleweb@apache-monitors-v1.jail.cloudmanaged.com'
 alias monitorsv2='ssh simpleweb@apache-monitors-v2.jail.cloudmanaged.com'
 alias sshtd='ssh -i ~/TweetDeck/tweetdeck-backend/credentials/key-restapi-instance'
 alias sshhc='ssh -i ~/HybridDeployment/credentials/master_key'
+alias ohc='cd /opt/HybridCluster'
 
 export CLICOLOR=1
 export PATH=/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php5/bin:$PATH
