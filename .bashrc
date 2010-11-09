@@ -168,3 +168,5 @@ export PYTHONPATH=$HOME/TweetDeck/tweetdeck-common:$HOME/TweetDeck/tweetdeck-api
 if [ -f ~/TweetDeck/tweetdeck-api/access_keys.sh ]; then
     source ~/TweetDeck/tweetdeck-api/access_keys.sh
 fi
+
+export FTP_PASSIVE_MODE=1

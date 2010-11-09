@@ -4,6 +4,11 @@ if [ -f .bashrc ]; then
 fi
 ln -s luke-vimrc/.bashrc
 
+if [ -f .bash_profile ]; then
+    mv .bash_profile .bash_profile.backup
+fi
+ln -s luke-vimrc/.bashrc .bash_profile
+
 if [ -f .vimrc ]; then
     mv .vimrc .vimrc.backup
 fi
