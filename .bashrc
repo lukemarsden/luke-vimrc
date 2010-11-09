@@ -152,6 +152,8 @@ alias sshtd='ssh -i ~/TweetDeck/tweetdeck-backend/credentials/key-restapi-instan
 alias sshhc='ssh -i ~/HybridDeployment/credentials/master_key'
 alias ohc='cd /opt/HybridCluster'
 
+alias myip="ifconfig |grep broadcast |cut -d ' ' -f 2"
+
 export CLICOLOR=1
 export PATH=/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php5/bin:$PATH
 export PATH=/usr/local/mysql/bin:$PATH
