@@ -54,7 +54,7 @@ set ruler
 set history=200
 
 " Stop no-indent on python comment lines!
-"inoremap # X#
+inoremap # X#
 
 let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 
