@@ -180,8 +180,8 @@ def blog_open_post(id):
     vim.current.window.cursor = (text_start+1, 0)
     vim.command('set nomodified')
     vim.command('set textwidth=0')
-  except:
-    sys.stderr.write("An error has occured")
+  except Exception, e:
+    sys.stderr.write("An error has occured" + str(e))
 
 def blog_list_edit():
   try:
