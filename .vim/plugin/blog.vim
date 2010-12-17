@@ -47,7 +47,7 @@ command! -nargs=0 BlogSend exec("py blog_send_post()")
 command! -nargs=1 BlogOpen exec('py blog_open_post(<f-args>)')
 python <<EOF
 # -*- coding: utf-8 -*-
-import urllib , urllib2 , vim , xml.dom.minidom , xmlrpclib , sys , string , re
+import urllib , urllib2 , vim , xml.dom.minidom , xmlrpclib , sys , string , re , os
 
 #####################
 #      Settings     #
