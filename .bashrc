@@ -153,7 +153,7 @@ alias sshhc='ssh -i ~/HybridDeployment/credentials/master_key'
 alias ohc='cd /opt/HybridCluster'
 
 alias myip="ifconfig |grep broadcast |cut -d ' ' -f 2"
-alias cspass="cat ~/HybridDeployment/fabfile.py |grep luke@"
+alias cspass="cat ~/HybridDeployment/fabfile.py |grep @hybr"
 
 export CLICOLOR=1
 export PATH=/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php5/bin:$PATH

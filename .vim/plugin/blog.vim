@@ -56,7 +56,7 @@ import urllib , urllib2 , vim , xml.dom.minidom , xmlrpclib , sys , string , re 
 enable_tags = 1
 blog_username = 'admin'
 blog_password = open(os.path.expanduser('~')+'/wordpress-admin-password.txt').read().strip()
-blog_url = 'http://dev.hybrid-sites.com/xmlrpc.php'
+blog_url = 'http://www.hybrid-sites.com/xmlrpc.php'
 
 #####################
 # Do not edit below #
