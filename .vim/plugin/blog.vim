@@ -44,6 +44,7 @@ command! -nargs=0 BlogList exec("py blog_list_posts()")
 command! -nargs=0 BlogPages exec("py blog_list_pages()")
 command! -nargs=0 BlogNew exec("py blog_new_post()")
 command! -nargs=0 BlogSend exec("py blog_send_post()")
+command! -nargs=0 BlogSave exec("py blog_send_post()")
 command! -nargs=1 BlogOpen exec('py blog_open_post(<f-args>)')
 python <<EOF
 # -*- coding: utf-8 -*-
