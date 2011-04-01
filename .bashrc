@@ -98,9 +98,9 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
-alias dev1='ssh hybrid@10.0.3.201'
-alias dev2='ssh hybrid@10.0.3.202'
-alias dev3='ssh hybrid@10.0.3.203'
+alias dev1='sshhc hybrid@10.0.3.201'
+alias dev2='sshhc hybrid@10.0.3.202'
+alias dev3='sshhc hybrid@10.0.3.203'
 
 alias jailstest='ssh hybrid@10.0.3.210'
 
@@ -126,6 +126,7 @@ alias node2='ssh luke@node2.digital-crocus.com'
 alias node3='ssh hybrid@node3.digital-crocus.com'
 alias node0='ssh luke@node0.hybridcluster.net'
 alias buildslave='ssh luke@buildslave.hybridcluster.net'
+alias jailmaster='ssh luke@jailmaster.hybridcluster.net'
 
 alias node4='ssh hybrid@91.209.244.194'
 alias node5='ssh hybrid@91.209.244.195'
@@ -171,3 +172,8 @@ if [ -f ~/TweetDeck/tweetdeck-api/access_keys.sh ]; then
 fi
 
 export FTP_PASSIVE_MODE=1
+#if [ "$PS1" ] ; then
+#mkdir -p -m 0700 /dev/cgroup/cpu/user/$$ > /dev/null 2>&1
+#echo $$ > /dev/cgroup/cpu/user/$$/tasks
+#echo "1" > /dev/cgroup/cpu/user/$$/notify_on_release
+#fi
