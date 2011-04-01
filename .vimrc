@@ -37,7 +37,7 @@ source ~/.vim/NERD_tree.vim
 source ~/.vim/taglist.vim
 source ~/.vim/mru.vim
 source ~/.vim/tabmerge.vim
-source ~/.vim/plugins/supertab.vim
+source ~/.vim/plugin/supertab.vim
 
 set popt=portrait:n
 au BufNewFile,BufRead *.ejs set filetype=html
