@@ -43,7 +43,6 @@ set popt=portrait:n
 au BufNewFile,BufRead *.ejs set filetype=html
 au BufNewFile,BufRead *.phtml set filetype=php
 
-
 let PHP_autoformatcomment = 0
 let g:netrw_keepdir=0
 let g:netrw_browse_split=2
@@ -62,3 +61,5 @@ let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 filetype indent on
 filetype on
 let Tlist_WinWidth = 45
+
+cnoreabbrev vimshell ConqueTerm bash
