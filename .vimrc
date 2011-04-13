@@ -60,5 +60,5 @@ inoremap # X#
 let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 
 filetype indent on
-
+filetype on
 let Tlist_WinWidth = 45
