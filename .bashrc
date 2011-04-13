@@ -156,6 +156,8 @@ alias ohc='cd /opt/HybridCluster'
 alias myip="ifconfig |grep broadcast |cut -d ' ' -f 2"
 alias cspass="cat ~/HybridDeployment/fabfile.py |grep @hybr"
 
+alias reset='reset; tset -e^?'
+
 export CLICOLOR=1
 export PATH=/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php5/bin:$PATH
 export PATH=/usr/local/mysql/bin:$PATH
