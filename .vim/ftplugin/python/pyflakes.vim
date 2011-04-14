@@ -132,15 +132,15 @@ if !b:did_python_init
     finish
 endif
 
-au BufLeave <buffer> call s:ClearPyflakes()
+"au BufLeave <buffer> call s:ClearPyflakes()
 
 au BufEnter <buffer> call s:RunPyflakes()
 au InsertLeave <buffer> call s:RunPyflakes()
 au InsertEnter <buffer> call s:RunPyflakes()
 au BufWritePost <buffer> call s:RunPyflakes()
 
-au CursorHold <buffer> call s:RunPyflakes()
-au CursorHoldI <buffer> call s:RunPyflakes()
+"au CursorHold <buffer> call s:RunPyflakes()
+"au CursorHoldI <buffer> call s:RunPyflakes()
 
 au CursorHold <buffer> call s:GetPyflakesMessage()
 au CursorMoved <buffer> call s:GetPyflakesMessage()
