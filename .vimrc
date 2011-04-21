@@ -56,10 +56,11 @@ set history=200
 " Stop no-indent on python comment lines!
 inoremap # X#
 
-let Tlist_Ctags_Cmd = '/usr/bin/ctags'
+let Tlist_Ctags_Cmd = '/usr/local/bin/exctags'
 
 filetype indent on
 filetype on
 let Tlist_WinWidth = 45
 
 cnoreabbrev vimshell ConqueTerm bash
+highlight SpellBad term=reverse ctermbg=7
