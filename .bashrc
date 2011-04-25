@@ -157,6 +157,7 @@ alias myip="ifconfig |grep broadcast |cut -d ' ' -f 2"
 alias cspass="cat ~/HybridDeployment/fabfile.py |grep @hybr"
 
 alias reset='reset; tset -e^?'
+alias z='zfs list -t snapshot,filesystem -r hpool/hcfs'
 
 export CLICOLOR=1
 export PATH=/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php5/bin:$PATH
