@@ -18,6 +18,9 @@ $if Bash
   Space: magic-space
 $endif
 
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+
 # Include system wide settings which are ignored
 # by default if one has their own .inputrc
 $include /etc/inputrc
