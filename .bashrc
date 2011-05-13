@@ -164,11 +164,7 @@ export PATH=/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php5/bin:$PATH
 export PATH=/usr/local/mysql/bin:$PATH
 export LS_COLORS="`echo $LS_COLORS |sed 's/di=[0-9]*;[0-9]*/di=01;34/; s/ow=[0-9]*;[0-9]*/ow=01;34/'`"
 
-export TWEETDECK_REPO=$HOME/TweetDeck/tweetdeck-backend
-export WEB_REPO=$HOME/TweetDeck/tweetdeck-web
-
-export DJANGO_SETTINGS_MODULE=tweetdecksite.settings
-export PYTHONPATH=$HOME/TweetDeck/tweetdeck-common:$HOME/TweetDeck/tweetdeck-api:$HOME/TweetDeck/tweetdeck-backend:$HOME/TweetDeck/tweetdeck-analytics:$HOME/TweetDeck/tweetdeck-web:$HOME/TweetDeck/tweetdeck-analytics
+export PYTHONPATH=$PYTHONPATH:/opt/HybridCluster/src:/opt/HybridCluster/src/txmysql
 
 if [ -f ~/TweetDeck/tweetdeck-api/access_keys.sh ]; then
     source ~/TweetDeck/tweetdeck-api/access_keys.sh
