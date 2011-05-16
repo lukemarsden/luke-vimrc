@@ -166,17 +166,14 @@ alias cspass="cat ~/HybridDeployment/fabfile.py |grep @hybr"
 alias reset='reset; tset -e^?'
 alias imap='ssh -f -i ~/HybridDeployment/credentials/master_key hybrid@109.107.35.48 -L 2001:digital-crocus.com:143 -N'
 alias smtp='ssh -f -i ~/HybridDeployment/credentials/master_key hybrid@109.107.35.48 -L 2000:digital-crocus.com:25 -N'
+alias z='zfs list -t snapshot,filesystem -r hpool/hcfs'
 
 export CLICOLOR=1
 export PATH=/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php5/bin:$PATH
 export PATH=/usr/local/mysql/bin:$PATH
 export LS_COLORS="`echo $LS_COLORS |sed 's/di=[0-9]*;[0-9]*/di=01;34/; s/ow=[0-9]*;[0-9]*/ow=01;34/'`"
 
-export TWEETDECK_REPO=$HOME/TweetDeck/tweetdeck-backend
-export WEB_REPO=$HOME/TweetDeck/tweetdeck-web
-
-export DJANGO_SETTINGS_MODULE=tweetdecksite.settings
-export PYTHONPATH=$HOME/TweetDeck/tweetdeck-common:$HOME/TweetDeck/tweetdeck-api:$HOME/TweetDeck/tweetdeck-backend:$HOME/TweetDeck/tweetdeck-analytics:$HOME/TweetDeck/tweetdeck-web:$HOME/TweetDeck/tweetdeck-analytics
+export PYTHONPATH=$PYTHONPATH:/opt/HybridCluster/src:/opt/HybridCluster/src/txmysql
 
 if [ -f ~/TweetDeck/tweetdeck-api/access_keys.sh ]; then
     source ~/TweetDeck/tweetdeck-api/access_keys.sh
