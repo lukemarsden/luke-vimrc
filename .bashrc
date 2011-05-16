@@ -102,6 +102,13 @@ alias dev1='sshhc hybrid@10.0.3.201'
 alias dev2='sshhc hybrid@10.0.3.202'
 alias dev3='sshhc hybrid@10.0.3.203'
 
+alias basement1='sshhc hybrid@192.168.1.201'
+alias basement2='sshhc hybrid@192.168.1.202'
+alias basement3='sshhc hybrid@192.168.1.203'
+alias basement4='sshhc hybrid@192.168.1.204'
+alias basement5='sshhc hybrid@192.168.1.205'
+alias basement6='sshhc hybrid@192.168.1.206'
+
 alias jailstest='ssh hybrid@10.0.3.210'
 
 alias dev1e='ssh hybrid@dev1-e.hybridcluster.net'
@@ -157,6 +164,8 @@ alias myip="ifconfig |grep broadcast |cut -d ' ' -f 2"
 alias cspass="cat ~/HybridDeployment/fabfile.py |grep @hybr"
 
 alias reset='reset; tset -e^?'
+alias imap='ssh -f -i ~/HybridDeployment/credentials/master_key hybrid@109.107.35.48 -L 2001:digital-crocus.com:143 -N'
+alias smtp='ssh -f -i ~/HybridDeployment/credentials/master_key hybrid@109.107.35.48 -L 2000:digital-crocus.com:25 -N'
 
 export CLICOLOR=1
 export PATH=/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php5/bin:$PATH
