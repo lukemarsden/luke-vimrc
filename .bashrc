@@ -169,11 +169,11 @@ alias smtp='ssh -f -i ~/HybridDeployment/credentials/master_key hybrid@109.107.3
 alias z='zfs list -t snapshot,filesystem -r hpool/hcfs'
 
 export CLICOLOR=1
-export PATH=/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php5/bin:$PATH
-export PATH=/usr/local/mysql/bin:$PATH
+export PATH=/usr/local/mysql/bin:/home/luke/HybridCluster/bin:$PATH
 export LS_COLORS="`echo $LS_COLORS |sed 's/di=[0-9]*;[0-9]*/di=01;34/; s/ow=[0-9]*;[0-9]*/ow=01;34/'`"
 
 export PYTHONPATH=$PYTHONPATH:/opt/HybridCluster/src:/opt/HybridCluster/src/txmysql
+export PYTHONPATH=$PYTHONPATH:/home/luke/HybridCluster/src:/home/luke/HybridCluster/src/txmysql:/home/luke/HybridCluster/src/txjsonrpc
 
 if [ -f ~/TweetDeck/tweetdeck-api/access_keys.sh ]; then
     source ~/TweetDeck/tweetdeck-api/access_keys.sh
