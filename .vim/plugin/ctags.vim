@@ -201,13 +201,14 @@ if has('perl')
 	$command .= " " . VIM::Eval("g:ctags_args");
 	$command .= " " . VIM::Eval("g:ctags_obligatory_args");
 	$command .= " " . VIM::Eval("expand('%')");
-
+        
 	open (CTAGS, $command . "|") or die $!;
 
 	while (<CTAGS>)
 	{
-	    s/^(.+?)\t.*?\t(\d*);.*$/\1\t\2/;
-	    my ($tag_name, $tag_line_num) = split /\t/;
+	    s/^(.+?)\t.*?\t(\d*);.*\t.\t(.*)\n$/\1\t\2\t\3/;
+	    my ($tag_name, $tag_line_num, $other_stuff) = split /\t/;
+            $tag_name = $other_stuff . "." . $tag_name;
 	    $tags .= $tag_name . "\n";
 	    $lines .= sprintf("%-*d", $length, $tag_line_num);
 	    $lines .= sprintf("%-*d", $length, $index);

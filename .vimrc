@@ -41,6 +41,8 @@ source ~/.vim/plugin/supertab.vim
 source ~/.vim/plugin/ctags.vim
 
 let g:ctags_statusline=1 
+let g:ctags_title=1 
+let generate_tags=1
 
 set popt=portrait:n
 au BufNewFile,BufRead *.ejs set filetype=html
