@@ -38,6 +38,9 @@ source ~/.vim/taglist.vim
 source ~/.vim/mru.vim
 source ~/.vim/tabmerge.vim
 source ~/.vim/plugin/supertab.vim
+source ~/.vim/plugin/ctags.vim
+
+let g:ctags_statusline=1 
 
 set popt=portrait:n
 au BufNewFile,BufRead *.ejs set filetype=html
