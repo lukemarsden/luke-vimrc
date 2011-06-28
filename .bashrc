@@ -168,6 +168,7 @@ alias imap='ssh -f -i ~/HybridDeployment/credentials/master_key hybrid@109.107.3
 alias smtp='ssh -f -i ~/HybridDeployment/credentials/master_key hybrid@109.107.35.48 -L 2000:digital-crocus.com:25 -N'
 alias z='zfs list -t snapshot,filesystem -r hpool/hcfs'
 alias io='sudo /usr/sbin/iostat -I -x -w 1'
+alias ack='ack-grep'
 
 export CLICOLOR=1
 export PATH=/usr/local/mysql/bin:/home/luke/HybridCluster/bin:$PATH
