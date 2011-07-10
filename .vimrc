@@ -62,6 +62,7 @@ set history=200
 inoremap # X#
 
 let Tlist_Ctags_Cmd = '/usr/local/bin/exctags'
+let g:ctags_path='/usr/local/bin/exctags'
 
 filetype indent on
 filetype on
