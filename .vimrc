@@ -1,11 +1,7 @@
 set nocp
 syntax on
 
-" Reza coding style
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
+autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 
 source ~/.vim/php-doc.vim
 inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
