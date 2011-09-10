@@ -3,6 +3,7 @@ syntax on
 
 set tabstop=4
 autocmd FileType python setlocal shiftwidth=4 softtabstop=4 expandtab
+autocmd FileType php cnoreabbrev w w<bar>!php -l % \|\| sleep 2<CR>
 
 source ~/.vim/php-doc.vim
 inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
