@@ -179,7 +179,7 @@ endif
 
 " Whether we sould map the "g" paste operators
 if !exists('g:yankring_paste_using_g')
-    let g:yankring_paste_using_g = 1
+    let g:yankring_paste_using_g = 0
 endif
 
 if !exists('g:yankring_v_key')
