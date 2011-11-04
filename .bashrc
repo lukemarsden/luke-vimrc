@@ -131,7 +131,7 @@ alias dc='ssh luke@digital-crocus.com'
 alias node1='ssh hybrid@node1.digital-crocus.com'
 alias node2='ssh luke@node2.digital-crocus.com'
 alias node3='ssh hybrid@node3.digital-crocus.com'
-alias node0='ssh luke@node0.hybridcluster.net'
+alias node0='ssh luke@cp.hybrid-cluster.com'
 alias buildslave='ssh luke@buildslave.hybridcluster.net'
 alias jailmaster='ssh luke@jailmaster.hybridcluster.net'
 
@@ -157,7 +157,7 @@ alias tucv2='ssh simpleweb@twistd-tuc-v2.jail.cloudmanaged.com'
 alias monitorsv1='ssh simpleweb@apache-monitors-v1.jail.cloudmanaged.com'
 alias monitorsv2='ssh simpleweb@apache-monitors-v2.jail.cloudmanaged.com'
 alias sshtd='ssh -i ~/TweetDeck/tweetdeck-backend/credentials/key-restapi-instance'
-alias sshhc='ssh -i ~/HybridDeployment/credentials/master_key'
+alias sshhc='ssh -p 2222 -i ~/HybridDeployment/credentials/master_key'
 alias ohc='cd /opt/HybridCluster'
 
 alias myip="ifconfig |grep broadcast |cut -d ' ' -f 2"
