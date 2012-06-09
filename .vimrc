@@ -70,4 +70,5 @@ let Tlist_WinWidth = 45
 cnoreabbrev vimshell ConqueTerm bash
 highlight SpellBad term=reverse ctermbg=7
 set tabpagemax=500
+cnoremap <C-k> <C-\>estrpart(getcmdline(), 0, getcmdpos()-1)<CR>
 
