@@ -171,7 +171,7 @@ alias io='sudo /usr/sbin/iostat -I -x -w 1'
 alias ack='ack-grep'
 
 export CLICOLOR=1
-export PATH=/usr/local/mysql/bin:/home/luke/HybridCluster/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/games:/usr/local/sbin:/usr/local/bin:$PATH
+export PATH=/usr/local/mysql/bin:/home/luke/HybridCluster/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/games:/usr/local/sbin:/usr/local/bin:/opt/HybridCluster/bin:$PATH
 export LS_COLORS="`echo $LS_COLORS |sed 's/di=[0-9]*;[0-9]*/di=01;34/; s/ow=[0-9]*;[0-9]*/ow=01;34/'`"
 
 export PYTHONPATH=$PYTHONPATH:/opt/HybridCluster/src:/opt/HybridCluster/src/txmysql
