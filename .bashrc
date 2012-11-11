@@ -187,3 +187,7 @@ export FTP_PASSIVE_MODE=1
 #echo $$ > /dev/cgroup/cpu/user/$$/tasks
 #echo "1" > /dev/cgroup/cpu/user/$$/notify_on_release
 #fi
+
+shopt -s histappend
+export PROMPT_COMMAND="history -a; history -n"
+
