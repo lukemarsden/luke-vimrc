@@ -24,4 +24,9 @@ if [ -f .inputrc ]; then
 fi
 ln -s luke-vimrc/.inputrc
 
+if [ -f .screenrc ]; then
+    mv .screenrc .screenrc.backup
+fi
+ln -s luke-vimrc/.screenrc
+
 
