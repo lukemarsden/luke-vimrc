@@ -187,3 +187,5 @@ export FTP_PASSIVE_MODE=1
 #echo $$ > /dev/cgroup/cpu/user/$$/tasks
 #echo "1" > /dev/cgroup/cpu/user/$$/notify_on_release
 #fi
+
+export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
