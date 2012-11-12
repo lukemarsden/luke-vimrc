@@ -189,3 +189,6 @@ export FTP_PASSIVE_MODE=1
 #fi
 
 export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
+shopt -s histappend
+export PROMPT_COMMAND="history -a; history -n"
+
