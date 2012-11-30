@@ -188,6 +188,7 @@ export FTP_PASSIVE_MODE=1
 #echo "1" > /dev/cgroup/cpu/user/$$/notify_on_release
 #fi
 
+export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
 shopt -s histappend
 export PROMPT_COMMAND="history -a; history -n"
 

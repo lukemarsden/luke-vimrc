@@ -1,9 +1,7 @@
 set nocp
 syntax on
 
-set tabstop=4
-autocmd FileType python setlocal shiftwidth=4 softtabstop=4 expandtab
-autocmd FileType php setlocal sts=4 ts=4 sw=4
+set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 autocmd FileType php cnoreabbrev <buffer> w w<bar>!php -l % \|\| sleep 2<CR>
 
 source ~/.vim/php-doc.vim
