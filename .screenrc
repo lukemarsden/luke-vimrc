@@ -1,4 +1,9 @@
 vbell off
-caption     always        "%{+b rk}%H%{gk} |%c %{yk}%d.%m.%Y | %72=Load: %l %{wk}"
-hardstatus alwayslastline "%?%{yk}%-Lw%?%{wb}%n*%f %t%?(%u)%?%?%{yk}%+Lw%?"
-
+hardstatus alwayslastline
+hardstatus string "%-w%{= BW}%50>%n %t%{-}%+w%<"
+defscrollback 30000
+nonblock on
+altscreen on
+startup_message off
+bindkey -k F1 prev
+bindkey -k F2 next
