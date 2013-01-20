@@ -29,4 +29,9 @@ if [ -f .screenrc ]; then
 fi
 ln -s luke-vimrc/.screenrc
 
+if [ -f .tmux.conf ]; then
+    mv .tmux.conf .screenrc.backup
+fi
+ln -s luke-vimrc/.tmux.conf
+
 

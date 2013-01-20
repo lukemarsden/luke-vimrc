@@ -60,7 +60,7 @@ try:
     blog_password = open(os.path.expanduser('~')+'/wordpress-admin-password.txt').read().strip()
 except:
     blog_password = None
-blog_url = 'http://www.hybrid-sites.com/xmlrpc.php'
+blog_url = 'http://www.hybrid-cluster.com/xmlrpc.php'
 
 #####################
 # Do not edit below #
