@@ -125,4 +125,5 @@ export FTP_PASSIVE_MODE=1
 export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
 shopt -s histappend
 export PROMPT_COMMAND="history -a"
+alias sshhc='ssh -p 2222 -i ~/HybridDeployment/credentials/master_key'
 
