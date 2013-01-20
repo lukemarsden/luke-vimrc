@@ -98,70 +98,8 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
-alias dev1='sshhc hybrid@10.0.3.201'
-alias dev2='sshhc hybrid@10.0.3.202'
-alias dev3='sshhc hybrid@10.0.3.203'
-
-alias basement1='sshhc hybrid@192.168.1.201'
-alias basement2='sshhc hybrid@192.168.1.202'
-alias basement3='sshhc hybrid@192.168.1.203'
-alias basement4='sshhc hybrid@192.168.1.204'
-alias basement5='sshhc hybrid@192.168.1.205'
-alias basement6='sshhc hybrid@192.168.1.206'
-
-alias jailstest='ssh hybrid@10.0.3.210'
-
-alias dev1e='ssh hybrid@dev1-e.hybridcluster.net'
-alias dev2e='ssh hybrid@dev2-e.hybridcluster.net'
-alias dev3e='ssh hybrid@dev3-e.hybridcluster.net'
-
-alias dev1t='ssh hybrid@dev1.hybridcluster.net'
-alias dev2t='ssh hybrid@dev2.hybridcluster.net'
-alias dev3t='ssh hybrid@dev3.hybridcluster.net'
-
-alias dev1b='ssh hybrid@192.168.1.207'
-alias dev2b='ssh hybrid@192.168.1.208'
-alias dev3b='ssh hybrid@192.168.1.209'
-alias dev4b='ssh hybrid@192.168.1.210'
-
-alias devina='ssh luke@devina.gotdns.com'
-
-alias crux='ssh luke@127cr.net'
-alias dc='ssh luke@digital-crocus.com'
-alias node1='ssh hybrid@node1.digital-crocus.com'
-alias node2='ssh luke@node2.digital-crocus.com'
-alias node3='ssh hybrid@node3.digital-crocus.com'
-alias node0='ssh luke@cp.hybrid-cluster.com'
-alias buildslave='ssh luke@buildslave.hybridcluster.net'
-alias jailmaster='ssh luke@jailmaster.hybridcluster.net'
-
-alias node4='ssh hybrid@91.209.244.194'
-alias node5='ssh hybrid@91.209.244.195'
-alias node6='ssh hybrid@91.209.244.196'
-
-alias monitors='ssh root@monitors.cloudmanaged.com'
-alias pulldev1='git pull hybrid@10.0.3.201:/opt/HybridCluster'
-alias pulldev2='git pull hybrid@10.0.3.202:/opt/HybridCluster'
-alias pulldev3='git pull hybrid@10.0.3.203:/opt/HybridCluster'
-alias sagi='sudo aptitude install'
-
-alias swdev1='ssh luke@192.168.0.201'
-alias cm1='ssh luke@cm1.server.cloudmanaged.com'
-alias cm2='ssh luke@cm2.server.cloudmanaged.com'
-alias mg1='ssh luke@mg1.server.cloudmanaged.com'
-alias mg1west='ssh luke@192.168.0.12'
-alias mg2='ssh luke@mg2.server.cloudmanaged.com'
-
-alias tucv1='ssh simpleweb@twistd-tuc-v1.jail.cloudmanaged.com'
-alias tucv2='ssh simpleweb@twistd-tuc-v2.jail.cloudmanaged.com'
-alias monitorsv1='ssh simpleweb@apache-monitors-v1.jail.cloudmanaged.com'
-alias monitorsv2='ssh simpleweb@apache-monitors-v2.jail.cloudmanaged.com'
-alias sshtd='ssh -i ~/TweetDeck/tweetdeck-backend/credentials/key-restapi-instance'
-alias sshhc='ssh -p 2222 -i ~/HybridDeployment/credentials/master_key'
-alias ohc='cd /opt/HybridCluster'
 
 alias myip="ifconfig |grep broadcast |cut -d ' ' -f 2"
-alias cspass="cat ~/HybridDeployment/fabfile.py |grep @hybr"
 
 alias reset='reset; tset -e^?'
 alias imap='ssh -f -i ~/HybridDeployment/credentials/master_key hybrid@109.107.35.48 -L 2001:digital-crocus.com:143 -N'
@@ -177,10 +115,6 @@ export LS_COLORS="`echo $LS_COLORS |sed 's/di=[0-9]*;[0-9]*/di=01;34/; s/ow=[0-9
 export PYTHONPATH=$PYTHONPATH:/opt/HybridCluster/src:/opt/HybridCluster/src/txmysql
 export PYTHONPATH=$PYTHONPATH:/home/luke/HybridCluster/src:/home/luke/HybridCluster/src/txmysql:/home/luke/HybridCluster/src/txjsonrpc
 
-if [ -f ~/TweetDeck/tweetdeck-api/access_keys.sh ]; then
-    source ~/TweetDeck/tweetdeck-api/access_keys.sh
-fi
-
 export FTP_PASSIVE_MODE=1
 #if [ "$PS1" ] ; then
 #mkdir -p -m 0700 /dev/cgroup/cpu/user/$$ > /dev/null 2>&1
@@ -190,5 +124,5 @@ export FTP_PASSIVE_MODE=1
 
 export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
 shopt -s histappend
-export PROMPT_COMMAND="history -a; history -n"
+export PROMPT_COMMAND="history -a"
 
