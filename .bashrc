@@ -129,4 +129,4 @@ export PROMPT_COMMAND="history -a"
 alias sshhc='ssh -p 2222 -i ~/HybridDeployment/credentials/master_key'
 
 alias sagi='sudo aptitude install'
-
+alias t='~/todo/todo.sh'
