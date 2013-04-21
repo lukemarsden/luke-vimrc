@@ -1,7 +1,7 @@
 backtick 1 15 15 /opt/HybridCluster/myip_ext.py
 vbell off
 hardstatus alwayslastline
-hardstatus string "%-w%{= BW}%50>%n %t%{-}%+w%< %1`"
+hardstatus string "%-w%{= BW}%50>%n %t%{-}%+w%<%=%1`"
 defscrollback 30000
 nonblock on
 altscreen on
