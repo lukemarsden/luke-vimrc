@@ -130,4 +130,8 @@ alias sshhc='ssh -p 2222 -i ~/HybridDeployment/credentials/master_key'
 
 alias sagi='sudo aptitude install'
 alias t='~/todo/todo.sh'
-alias todo='vim ~/todo/todo.txt'
+# Make a new line at the start of the file
+alias todo="echo '0a
+
+.
+w' | ed ~/todo/todo.txt; vim ~/Todo.txt"
