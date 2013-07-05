@@ -9,6 +9,10 @@
 "\e[B": history-search-forward
 "\e[A": history-search-backward
 
+# Andriy's preferences.
+"\ep":  history-search-backward
+"\en":  history-search-forward
+
 $if Bash
   # F10 toggles mc on and off
   # Note Ctrl-o toggles panes on and off in mc
