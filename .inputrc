@@ -6,12 +6,13 @@
 # the subset of the history starting with that text
 # is searched (like 4dos for e.g.).
 # Note to get rid of a line just Ctrl-C
-"\e[B": history-search-forward
-"\e[A": history-search-backward
 
 # Andriy's preferences.
 "\ep":  history-search-backward
 "\en":  history-search-forward
+
+"\e[B": history-search-forward
+"\e[A": history-search-backward
 
 $if Bash
   # F10 toggles mc on and off
