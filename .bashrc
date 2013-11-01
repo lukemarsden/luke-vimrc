@@ -115,6 +115,7 @@ export LS_COLORS="`echo $LS_COLORS |sed 's/di=[0-9]*;[0-9]*/di=01;34/; s/ow=[0-9
 
 export PYTHONPATH=$PYTHONPATH:/opt/HybridCluster/src:/opt/HybridCluster/src/txmysql
 export PYTHONPATH=$PYTHONPATH:/home/luke/HybridCluster/src:/home/luke/HybridCluster/src/txmysql:/home/luke/HybridCluster/src/txjsonrpc
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 export FTP_PASSIVE_MODE=1
 #if [ "$PS1" ] ; then
