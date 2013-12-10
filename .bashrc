@@ -137,4 +137,7 @@ alias todo="echo '0a
 .
 w' | ed ~/todo/todo.txt; vim ~/Todo.txt"
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
-source /usr/local/etc/bash_completion.d/git-completion.bash
+if [ -e /usr/local/etc/bash_completion.d/git-completion.bash ]; then
+    source /usr/local/etc/bash_completion.d/git-completion.bash
+fi
+export PYTHONDONTWRITEBYTECODE=1
