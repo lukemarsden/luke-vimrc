@@ -141,3 +141,14 @@ if [ -e /usr/local/etc/bash_completion.d/git-completion.bash ]; then
     source /usr/local/etc/bash_completion.d/git-completion.bash
 fi
 export PYTHONDONTWRITEBYTECODE=1
+export EDITOR=vim
+
+# The next line updates PATH for the Google Cloud SDK.
+export PATH=/Users/luke/google-cloud-sdk/bin:$PATH
+
+# The next line enables bash completion for gcloud.
+if [ -e /Users/luke/google-cloud-sdk/arg_rc ]; then
+    source /Users/luke/google-cloud-sdk/arg_rc
+fi
+
+alias sshvm='ssh -i ~/.vagrant.d/insecure_private_key vagrant@192.168.56.50'

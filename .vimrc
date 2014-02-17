@@ -79,3 +79,6 @@ highlight SpellBad term=reverse ctermbg=7
 set tabpagemax=500
 cnoremap <C-k> <C-\>estrpart(getcmdline(), 0, getcmdpos()-1)<CR>
 
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+
