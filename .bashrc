@@ -136,7 +136,7 @@ alias todo="echo '0a
 
 .
 w' | ed ~/todo/todo.txt; vim ~/Todo.txt"
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:~/twisted-dev-tools/:$PYTHONPATH
 if [ -e /usr/local/etc/bash_completion.d/git-completion.bash ]; then
     source /usr/local/etc/bash_completion.d/git-completion.bash
 fi
@@ -144,7 +144,7 @@ export PYTHONDONTWRITEBYTECODE=1
 export EDITOR=vim
 
 # The next line updates PATH for the Google Cloud SDK.
-export PATH=/Users/luke/google-cloud-sdk/bin:$PATH
+export PATH=/Users/luke/google-cloud-sdk/bin:~/twisted-dev-tools/bin/:$PATH
 
 # The next line enables bash completion for gcloud.
 if [ -e /Users/luke/google-cloud-sdk/arg_rc ]; then
@@ -152,3 +152,4 @@ if [ -e /Users/luke/google-cloud-sdk/arg_rc ]; then
 fi
 
 alias sshvm='ssh -i ~/.vagrant.d/insecure_private_key vagrant@192.168.56.50'
+
