@@ -49,6 +49,12 @@ au BufNewFile,BufRead *.txt set nolist
 au BufNewFile,BufRead *.txt set textwidth=0
 au BufNewFile,BufRead *.txt set wrapmargin=0
 
+au BufNewFile,BufRead *.rst set wrap
+au BufNewFile,BufRead *.rst set linebreak
+au BufNewFile,BufRead *.rst set nolist
+au BufNewFile,BufRead *.rst set textwidth=0
+au BufNewFile,BufRead *.rst set wrapmargin=0
+
 au BufNewFile,BufRead *.ejs set filetype=html
 au BufNewFile,BufRead *.phtml set filetype=php
 
