@@ -57,6 +57,7 @@ au BufNewFile,BufRead *.rst set wrapmargin=0
 
 au BufNewFile,BufRead *.ejs set filetype=html
 au BufNewFile,BufRead *.phtml set filetype=php
+au BufNewFile,BufRead *.md set filetype=markdown
 
 au BufNewFile,BufRead *Todo.txt set filetype=todo
 

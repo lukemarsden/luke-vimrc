@@ -65,7 +65,7 @@ xterm*|rxvt*)
     ;;
 esac
 
-alias ls='~/luke-vimrc/ls.sh'
+#alias ls='~/luke-vimrc/ls.sh'
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
