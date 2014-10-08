@@ -156,3 +156,6 @@ ssh-add ~/.vagrant.d/insecure_private_key 2> /dev/null
 
 alias lsc='sudo python /opt/HybridCluster/src/devtools/StateMachineTester.py -c "dict([(x, (self._containerNetworkAllocator.jailConfig.get(x, {}).get(\"ID\", \"\")[:12], self._containerNetworkAllocator.jailConfig.get(x, {}).get(\"Name\"), self.filesystem_handlers[x].state)) for x in self.myFilesystems])"'
 alias lsd='sudo python /opt/HybridCluster/src/devtools/StateMachineTester.py -c "dict([(x, (y[\"ID\"][:12], y[\"Name\"], self.filesystem_handlers[x].state)) for (x, y) in self._containerNetworkAllocator.jailConfig.iteritems()])"'
+
+alias juggler='sudo /opt/HybridCluster/src/watch-juggler.sh'
+alias countdown='sudo tail -f /opt/HybridCluster/log/sitejuggler.log |grep "will be declared"'
