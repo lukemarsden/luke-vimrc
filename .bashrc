@@ -154,5 +154,5 @@ fi
 alias sshvm='ssh -i ~/.vagrant.d/insecure_private_key vagrant@192.168.56.50'
 ssh-add ~/.vagrant.d/insecure_private_key 2> /dev/null
 
-alias lsc='sudo python /opt/HybridCluster/src/devtools/StateMachineTester.py -c "dict([(x, (self._containerNetworkAllocator.jailConfig.get(x, {}).get(\"ID\", \"\")[:12], self._containerNetworkAllocator.jailConfig.get(x, {}).get(\"Name\"), self.filesystem_handlers[x].state)) for x in self.myFilesystems])"'
+alias lsc='sudo python /opt/HybridCluster/src/devtools/StateMachineTester.py -c "dict([(x, (self._containerNetworkAllocator.jailConfig.get(x, {}).get(\"ID\", \"\")[:12], self._containerNetworkAllocator.jailConfig.get(x, {}).get(\"Name\"), self._containerNetworkAllocator.jailConfig.get(x, {}).get(\"NetworkSettings\", {}).get(\"IPAddress\", \"none\").encode(\"ascii\"), self.filesystem_handlers[x].state)) for x in self.myFilesystems])"'
 alias lsd='sudo python /opt/HybridCluster/src/devtools/StateMachineTester.py -c "dict([(x, (y[\"ID\"][:12], y[\"Name\"], self.filesystem_handlers[x].state)) for (x, y) in self._containerNetworkAllocator.jailConfig.iteritems()])"'
