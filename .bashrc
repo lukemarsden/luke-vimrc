@@ -158,4 +158,5 @@ alias lsc='sudo python /opt/HybridCluster/src/devtools/StateMachineTester.py -c 
 alias lsd='sudo python /opt/HybridCluster/src/devtools/StateMachineTester.py -c "dict([(x, (y[\"ID\"][:12], y[\"Name\"], self.filesystem_handlers[x].state)) for (x, y) in self._containerNetworkAllocator.jailConfig.iteritems()])"'
 
 alias juggler='sudo /opt/HybridCluster/src/watch-juggler.sh'
+alias filesystems='sudo /opt/HybridCluster/src/watch-filesystems.sh'
 alias countdown='sudo tail -f /opt/HybridCluster/log/sitejuggler.log |grep "will be declared"'
