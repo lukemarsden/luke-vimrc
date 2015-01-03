@@ -110,7 +110,8 @@ alias ack='ack-grep'
 
 export CLICOLOR=1
 #export PATH=/opt/pypy/bin:/usr/local/mysql/bin:/home/luke/HybridCluster/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/games:/usr/local/sbin:/usr/local/bin:/opt/HybridCluster/bin:$PATH
-export PATH=/usr/local/mysql/bin:/home/luke/HybridCluster/bin:/sbin:/bin:/usr/sbin:/usr/local/bin:/usr/bin:/usr/games:/usr/local/sbin:/opt/HybridCluster/bin:~/flocker-tutorial/bin:$PATH
+#export PATH=/usr/local/mysql/bin:/home/luke/HybridCluster/bin:/sbin:/bin:/usr/sbin:/usr/local/bin:/usr/bin:/usr/games:/usr/local/sbin:/opt/HybridCluster/bin:~/flocker-tutorial/bin:$PATH
+export PATH=/usr/local/mysql/bin:/home/luke/HybridCluster/bin:/sbin:/bin:/usr/sbin:/usr/local/bin:/usr/bin:/usr/games:/usr/local/sbin:/opt/HybridCluster/bin:$PATH
 export LS_COLORS="`echo $LS_COLORS |sed 's/di=[0-9]*;[0-9]*/di=01;34/; s/ow=[0-9]*;[0-9]*/ow=01;34/'`"
 
 export PYTHONPATH=$PYTHONPATH:/opt/HybridCluster/src:/opt/HybridCluster/src/txmysql
@@ -160,3 +161,7 @@ alias lsd='sudo python /opt/HybridCluster/src/devtools/StateMachineTester.py -c 
 alias juggler='sudo /opt/HybridCluster/src/watch-juggler.sh'
 alias filesystems='sudo /opt/HybridCluster/src/watch-filesystems.sh'
 alias countdown='sudo tail -f /opt/HybridCluster/log/sitejuggler.log |grep "will be declared"'
+eval `docker-osx env`
+
+export GOPATH=~/gocode
+export PATH=~/gocode/bin:$PATH
