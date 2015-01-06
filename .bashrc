@@ -130,7 +130,7 @@ shopt -s histappend
 export PROMPT_COMMAND="history -a"
 alias sshhc='ssh -p 2222 -i ~/HybridDeployment/credentials/master_key'
 
-alias sagi='sudo aptitude install'
+alias sagi='sudo apt-get install'
 alias t='~/todo/todo.sh'
 # Make a new line at the start of the file
 alias todo="echo '0a
@@ -161,7 +161,7 @@ alias lsd='sudo python /opt/HybridCluster/src/devtools/StateMachineTester.py -c 
 alias juggler='sudo /opt/HybridCluster/src/watch-juggler.sh'
 alias filesystems='sudo /opt/HybridCluster/src/watch-filesystems.sh'
 alias countdown='sudo tail -f /opt/HybridCluster/log/sitejuggler.log |grep "will be declared"'
-eval `docker-osx env`
+if `which docker-osx`; then eval `docker-osx env`; fi
 
 export GOPATH=~/gocode
 export PATH=~/gocode/bin:$PATH
