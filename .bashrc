@@ -161,7 +161,7 @@ alias lsd='sudo python /opt/HybridCluster/src/devtools/StateMachineTester.py -c 
 alias juggler='sudo /opt/HybridCluster/src/watch-juggler.sh'
 alias filesystems='sudo /opt/HybridCluster/src/watch-filesystems.sh'
 alias countdown='sudo tail -f /opt/HybridCluster/log/sitejuggler.log |grep "will be declared"'
-if $(which docker-osx); then eval `docker-osx env`; fi
+if which docker-osx; then eval `docker-osx env`; fi
 
 export GOPATH=~/gocode
 export PATH=~/gocode/bin:$PATH
