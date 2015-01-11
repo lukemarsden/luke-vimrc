@@ -91,3 +91,7 @@ match ExtraWhitespace /\s\+$/
 
 execute pathogen#infect()
 
+" Home/End for Mac
+imap <C-a> <Home>
+imap <C-e> <End>
+
