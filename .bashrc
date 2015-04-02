@@ -165,3 +165,4 @@ export DOCKER_TLS_VERIFY=1
 
 export GOPATH=~/gocode
 export PATH=~/gocode/bin:$PATH
+export VAGRANT_DEFAULT_PROVIDER=virtualbox
