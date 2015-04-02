@@ -1,0 +1,16 @@
+#!/bin/bash
+
+USERID="luke"
+
+case "$1" in
+    suspend|hibernate)
+        # executed on suspend
+        ;;
+    resume|thaw)
+        # executed on resume
+        service network-manager restart
+        env DISPLAY=":0" XAUTHORITY="/home/${USERID}/.Xauthority" su $USERID -c "syndaemon -i 0.2 -k" &
+        ;;
+    *)
+        ;;
+esac
