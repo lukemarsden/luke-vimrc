@@ -159,7 +159,7 @@ alias juggler='sudo /opt/HybridCluster/src/watch-juggler.sh'
 alias filesystems='sudo /opt/HybridCluster/src/watch-filesystems.sh'
 alias countdown='sudo tail -f /opt/HybridCluster/log/sitejuggler.log |grep "will be declared"'
 
-if which boot2docker; then
+if which boot2docker > /dev/null; then
     export DOCKER_HOST=tcp://192.168.59.103:2376
     export DOCKER_CERT_PATH=/Users/luke/.boot2docker/certs/boot2docker-vm
     export DOCKER_TLS_VERIFY=1
