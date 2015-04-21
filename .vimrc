@@ -37,8 +37,8 @@ source ~/.vim/tabmerge.vim
 source ~/.vim/plugin/supertab.vim
 source ~/.vim/plugin/ctags.vim
 
-let g:ctags_statusline=1 
-let g:ctags_title=1 
+let g:ctags_statusline=1
+let g:ctags_title=1
 let generate_tags=1
 
 set popt=portrait:n
@@ -95,3 +95,8 @@ execute pathogen#infect()
 imap <C-a> <Home>
 imap <C-e> <End>
 
+syntax enable
+filetype plugin on
+" set number
+let g:go_disable_autoinstall = 0
+" colorscheme molokai
