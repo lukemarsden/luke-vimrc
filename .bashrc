@@ -165,6 +165,12 @@ if which boot2docker > /dev/null; then
     export DOCKER_TLS_VERIFY=1
 fi
 
+if which docker-machine > /dev/null; then
+    eval "$(docker-machine env default)"
+fi
+
 export GOPATH=~/gocode
 export PATH=~/gocode/bin:$PATH
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
+alias lw='PS1="\h:\W \u (leaseweb)$ "; cp ~/.swarm/lw.token ~/.swarm/token; export SWARM_CLUSTER_ID=leaseweb-alpha-private.giantswarm.io; unset SWARM_ENDPOINT_URL; swarm env clusterhq/prod; echo "using leaseweb"'
+export TUTUM_USER=lmarsden
