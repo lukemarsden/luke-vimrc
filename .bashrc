@@ -165,9 +165,7 @@ if which boot2docker > /dev/null; then
     export DOCKER_TLS_VERIFY=1
 fi
 
-if which docker-machine > /dev/null; then
-    eval "$(docker-machine env default)"
-fi
+alias edm='eval "$(docker-machine env default)"'
 
 export GOPATH=~/gocode
 export PATH=~/gocode/bin:$PATH
