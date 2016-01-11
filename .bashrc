@@ -172,3 +172,11 @@ export PATH=~/gocode/bin:$PATH
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 alias lw='PS1="\h:\W \u (leaseweb)$ "; cp ~/.swarm/lw.token ~/.swarm/token; export SWARM_CLUSTER_ID=leaseweb-alpha-private.giantswarm.io; unset SWARM_ENDPOINT_URL; swarm env clusterhq/prod; echo "using leaseweb"'
 export TUTUM_USER=lmarsden
+
+alias builddocs='docker run -v ${PWD}/AUTHORS.rst:/app/AUTHORS.rst \
+        -v ${PWD}/CONTRIBUTING.rst:/app/CONTRIBUTING.rst \
+        -v ${PWD}/README.rst:/app/README.rst \
+        -v ${PWD}/docs/:/app/docs/ clusterhq/flocker-docs-builder'
+alias servedocs='docker run -p 8080:8080 -ti -v ${PWD}/docs/_build/html:/www \
+        --entrypoint twistd clusterhq/flocker-docs-builder \
+        -n web --path /www'
