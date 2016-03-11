@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+
+cd luke-vimrc && git submodule init && cd ..
+cd luke-vimrc && git submodule update && cd ..
+
 if [ -f .bashrc ]; then
     mv .bashrc .bashrc.backup
 fi
