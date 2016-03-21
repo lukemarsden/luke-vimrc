@@ -168,10 +168,8 @@ fi
 alias edm='eval "$(docker-machine env default)"'
 
 export GOPATH=~/gocode
-export GOROOT=/usr/local/opt/go/libexec
 
 export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
 
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 alias lw='PS1="\h:\W \u (leaseweb)$ "; cp ~/.swarm/lw.token ~/.swarm/token; export SWARM_CLUSTER_ID=leaseweb-alpha-private.giantswarm.io; unset SWARM_ENDPOINT_URL; swarm env clusterhq/prod; echo "using leaseweb"'
