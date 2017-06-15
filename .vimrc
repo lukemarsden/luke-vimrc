@@ -42,13 +42,6 @@ let g:ctags_title=1
 let generate_tags=1
 
 set popt=portrait:n
-au BufNewFile,BufRead *.txt set filetype=rst
-au BufNewFile,BufRead *.txt set wrap
-au BufNewFile,BufRead *.txt set linebreak
-au BufNewFile,BufRead *.txt set nolist
-au BufNewFile,BufRead *.txt set textwidth=0
-au BufNewFile,BufRead *.txt set wrapmargin=0
-
 au BufNewFile,BufRead *.rst set wrap
 au BufNewFile,BufRead *.rst set linebreak
 au BufNewFile,BufRead *.rst set nolist

@@ -52,7 +52,7 @@ fi
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}luke@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -169,7 +169,7 @@ alias edm='eval "$(docker-machine env default)"'
 
 export GOPATH=~/gocode
 
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/usr/local/go/bin:$HOME/gocode/bin
 
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 alias lw='PS1="\h:\W \u (leaseweb)$ "; cp ~/.swarm/lw.token ~/.swarm/token; export SWARM_CLUSTER_ID=leaseweb-alpha-private.giantswarm.io; unset SWARM_ENDPOINT_URL; swarm env clusterhq/prod; echo "using leaseweb"'
@@ -182,3 +182,7 @@ alias builddocs='docker run -v ${PWD}/AUTHORS.rst:/app/AUTHORS.rst \
 alias servedocs='docker run -p 8080:8080 -ti -v ${PWD}/docs/_build/html:/www \
         --entrypoint twistd clusterhq/flocker-docs-builder \
         -n web --path /www'
+
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/gocode
+alias godep=/home/luke/gocode/bin/godep
