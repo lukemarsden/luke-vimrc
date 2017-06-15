@@ -102,16 +102,12 @@ fi
 alias myip="ifconfig |grep broadcast |cut -d ' ' -f 2"
 
 alias reset='reset; tset -e^?'
-alias imap='ssh -f -i ~/HybridDeployment/credentials/master_key hybrid@109.107.35.48 -L 2001:digital-crocus.com:143 -N'
-alias smtp='ssh -f -i ~/HybridDeployment/credentials/master_key hybrid@109.107.35.48 -L 2000:digital-crocus.com:25 -N'
 alias z='zfs list -t snapshot,filesystem -r hpool/hcfs'
 alias io='sudo /usr/sbin/iostat -I -x -w 1 |grep -v pass'
 alias ack='ack-grep'
 
 export CLICOLOR=1
-#export PATH=/opt/pypy/bin:/usr/local/mysql/bin:/home/luke/HybridCluster/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/games:/usr/local/sbin:/usr/local/bin:/opt/HybridCluster/bin:$PATH
-#export PATH=/usr/local/mysql/bin:/home/luke/HybridCluster/bin:/sbin:/bin:/usr/sbin:/usr/local/bin:/usr/bin:/usr/games:/usr/local/sbin:/opt/HybridCluster/bin:~/flocker-tutorial/bin:$PATH
-export PATH=$HOME/.cask/bin:/usr/local/mysql/bin:/home/luke/HybridCluster/bin:/sbin:/bin:/usr/sbin:/usr/local/bin:/usr/bin:/usr/games:/usr/local/sbin:/opt/HybridCluster/bin:$PATH
+export PATH=$HOME/.cask/bin:/sbin:/bin:/usr/sbin:/usr/local/bin:/usr/bin:/usr/games:/usr/local/sbin:$PATH
 export LS_COLORS="`echo $LS_COLORS |sed 's/di=[0-9]*;[0-9]*/di=01;34/; s/ow=[0-9]*;[0-9]*/ow=01;34/'`"
 
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
@@ -126,7 +122,6 @@ export FTP_PASSIVE_MODE=1
 export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
 shopt -s histappend
 export PROMPT_COMMAND="history -a"
-alias sshhc='ssh -p 2222 -i ~/HybridDeployment/credentials/master_key'
 
 alias sagi='sudo apt-get install'
 alias t='~/todo/todo.sh'
@@ -152,13 +147,6 @@ fi
 alias sshvm='ssh -i ~/.vagrant.d/insecure_private_key vagrant@192.168.56.50'
 ssh-add ~/.vagrant.d/insecure_private_key 2> /dev/null
 
-alias lsc='sudo python /opt/HybridCluster/src/devtools/StateMachineTester.py -c "dict([(x, (self._containerNetworkAllocator.jailConfig.get(x, {}).get(\"ID\", \"\")[:12], self._containerNetworkAllocator.jailConfig.get(x, {}).get(\"Name\"), self._containerNetworkAllocator.jailConfig.get(x, {}).get(\"NetworkSettings\", {}).get(\"IPAddress\", \"none\").encode(\"ascii\"), self.filesystem_handlers[x].state)) for x in self.myFilesystems])"'
-alias lsd='sudo python /opt/HybridCluster/src/devtools/StateMachineTester.py -c "dict([(x, (y[\"ID\"][:12], y[\"Name\"], self.filesystem_handlers[x].state)) for (x, y) in self._containerNetworkAllocator.jailConfig.iteritems()])"'
-
-alias juggler='sudo /opt/HybridCluster/src/watch-juggler.sh'
-alias filesystems='sudo /opt/HybridCluster/src/watch-filesystems.sh'
-alias countdown='sudo tail -f /opt/HybridCluster/log/sitejuggler.log |grep "will be declared"'
-
 if which boot2docker > /dev/null; then
     export DOCKER_HOST=tcp://192.168.59.103:2376
     export DOCKER_CERT_PATH=/Users/luke/.boot2docker/certs/boot2docker-vm
@@ -167,22 +155,11 @@ fi
 
 alias edm='eval "$(docker-machine env default)"'
 
+export GOROOT=/usr/local/go
 export GOPATH=~/gocode
 
 export PATH=$PATH:/usr/local/go/bin:$HOME/gocode/bin
 
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
-alias lw='PS1="\h:\W \u (leaseweb)$ "; cp ~/.swarm/lw.token ~/.swarm/token; export SWARM_CLUSTER_ID=leaseweb-alpha-private.giantswarm.io; unset SWARM_ENDPOINT_URL; swarm env clusterhq/prod; echo "using leaseweb"'
-export TUTUM_USER=lmarsden
 
-alias builddocs='docker run -v ${PWD}/AUTHORS.rst:/app/AUTHORS.rst \
-        -v ${PWD}/CONTRIBUTING.rst:/app/CONTRIBUTING.rst \
-        -v ${PWD}/README.rst:/app/README.rst \
-        -v ${PWD}/docs/:/app/docs/ clusterhq/flocker-docs-builder'
-alias servedocs='docker run -p 8080:8080 -ti -v ${PWD}/docs/_build/html:/www \
-        --entrypoint twistd clusterhq/flocker-docs-builder \
-        -n web --path /www'
-
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/gocode
 alias godep=/home/luke/gocode/bin/godep
