@@ -155,7 +155,6 @@ fi
 
 alias edm='eval "$(docker-machine env default)"'
 
-export GOROOT=/usr/local/go
 export GOPATH=~/gocode
 
 export PATH=$PATH:/usr/local/go/bin:$HOME/gocode/bin
@@ -163,3 +162,9 @@ export PATH=$PATH:/usr/local/go/bin:$HOME/gocode/bin
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 
 alias godep=/home/luke/gocode/bin/godep
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/luke/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/Users/luke/Downloads/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/luke/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/luke/Downloads/google-cloud-sdk/completion.bash.inc'; fi
