@@ -147,7 +147,7 @@ fi
 alias sshvm='ssh -i ~/.vagrant.d/insecure_private_key vagrant@192.168.56.50'
 ssh-add ~/.vagrant.d/insecure_private_key 2> /dev/null
 
-if which boot2docker > /dev/null; then
+if which boot2docker > /dev/null 2>/dev/null; then
     export DOCKER_HOST=tcp://192.168.59.103:2376
     export DOCKER_CERT_PATH=/Users/luke/.boot2docker/certs/boot2docker-vm
     export DOCKER_TLS_VERIFY=1
