@@ -52,7 +52,7 @@ fi
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}luke@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -160,4 +160,10 @@ export GOPATH=~/gocode
 export PATH=$PATH:$GOPATH/bin
 
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
-export PATH=/usr/local/go/bin:$PATH
+export PATH=/usr/local/go/bin:/usr/lib/go-1.10/bin/:$PATH
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/luke/google-cloud-sdk/path.bash.inc' ]; then source '/home/luke/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/luke/google-cloud-sdk/completion.bash.inc' ]; then source '/home/luke/google-cloud-sdk/completion.bash.inc'; fi
