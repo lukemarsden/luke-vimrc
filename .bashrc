@@ -147,7 +147,7 @@ fi
 alias sshvm='ssh -i ~/.vagrant.d/insecure_private_key vagrant@192.168.56.50'
 ssh-add ~/.vagrant.d/insecure_private_key 2> /dev/null
 
-if which boot2docker > /dev/null; then
+if which boot2docker > /dev/null 2>/dev/null; then
     export DOCKER_HOST=tcp://192.168.59.103:2376
     export DOCKER_CERT_PATH=/Users/luke/.boot2docker/certs/boot2docker-vm
     export DOCKER_TLS_VERIFY=1
@@ -157,13 +157,14 @@ alias edm='eval "$(docker-machine env default)"'
 
 export GOPATH=~/gocode
 
-export PATH=$PATH:$GOPATH/bin
+export PATH=/usr/local/go/bin:/usr/lib/go-1.10/bin/:$HOME/gocode/bin:$PATH
 
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
-export PATH=/usr/local/go/bin:/usr/lib/go-1.10/bin/:$PATH
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/luke/google-cloud-sdk/path.bash.inc' ]; then source '/home/luke/google-cloud-sdk/path.bash.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/luke/google-cloud-sdk/completion.bash.inc' ]; then source '/home/luke/google-cloud-sdk/completion.bash.inc'; fi
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
