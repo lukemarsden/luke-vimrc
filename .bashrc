@@ -107,7 +107,7 @@ alias io='sudo /usr/sbin/iostat -I -x -w 1 |grep -v pass'
 alias ack='ack-grep'
 
 export CLICOLOR=1
-export PATH=$HOME/.cask/bin:/sbin:/bin:/usr/sbin:/usr/local/bin:/usr/bin:/usr/games:/usr/local/sbin:$PATH
+export PATH=$HOME/bin:$HOME/.cask/bin:/sbin:/bin:/usr/sbin:/usr/local/bin:/usr/bin:/usr/games:/usr/local/sbin:$PATH
 export LS_COLORS="`echo $LS_COLORS |sed 's/di=[0-9]*;[0-9]*/di=01;34/; s/ow=[0-9]*;[0-9]*/ow=01;34/'`"
 
 #export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
