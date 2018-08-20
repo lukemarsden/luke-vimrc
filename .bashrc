@@ -110,7 +110,7 @@ export CLICOLOR=1
 export PATH=$HOME/.cask/bin:/sbin:/bin:/usr/sbin:/usr/local/bin:/usr/bin:/usr/games:/usr/local/sbin:$PATH
 export LS_COLORS="`echo $LS_COLORS |sed 's/di=[0-9]*;[0-9]*/di=01;34/; s/ow=[0-9]*;[0-9]*/ow=01;34/'`"
 
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+#export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 export FTP_PASSIVE_MODE=1
 #if [ "$PS1" ] ; then
@@ -168,3 +168,10 @@ if [ -f '/home/luke/google-cloud-sdk/path.bash.inc' ]; then source '/home/luke/g
 if [ -f '/home/luke/google-cloud-sdk/completion.bash.inc' ]; then source '/home/luke/google-cloud-sdk/completion.bash.inc'; fi
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[ -f /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.bash ] && . /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.bash
+# added by Miniconda3 installer
+export PATH="/Users/luke/miniconda3/bin:$PATH"
+export GATEWAY_HOSTNAME=192.168.188.1
