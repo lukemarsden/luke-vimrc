@@ -173,5 +173,5 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
 [ -f /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.bash ] && . /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.bash
 # added by Miniconda3 installer
-export PATH="/Users/luke/miniconda3/bin:$PATH"
+export PATH="/Users/luke/miniconda3/bin:/home/luke/.local/bin/:$PATH"
 export GATEWAY_HOSTNAME=192.168.188.1
