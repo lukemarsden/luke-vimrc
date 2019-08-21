@@ -175,3 +175,4 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 # added by Miniconda3 installer
 export PATH="/Users/luke/miniconda3/bin:/home/luke/.local/bin/:$PATH"
 export GATEWAY_HOSTNAME=192.168.188.1
+#echo 2 | sudo tee /sys/module/hid_apple/parameters/fnmode
