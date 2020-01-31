@@ -176,3 +176,6 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 export PATH="/Users/luke/miniconda3/bin:/home/luke/.local/bin/:$PATH"
 export GATEWAY_HOSTNAME=192.168.188.1
 #echo 2 | sudo tee /sys/module/hid_apple/parameters/fnmode
+export TERM=xterm
+export GITHUB_USER=lukemarsden
+export GITHUB_TOKEN=1851be4234bf4a80af6adbf0a739d126f25e83d3
