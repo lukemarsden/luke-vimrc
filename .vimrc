@@ -94,3 +94,4 @@ filetype plugin on
 " set number
 let g:go_disable_autoinstall = 0
 " colorscheme molokai
+autocmd BufWritePre *.go :GoBuild
