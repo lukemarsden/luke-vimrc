@@ -9,6 +9,10 @@ inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
 nnoremap <C-P> :call PhpDocSingle()<CR>
 vnoremap <C-P> :call PhpDocRange()<CR>
 
+" map ctrl+w to ctrl+e so that disabled ctrl+w (jupyter terminal vs chrome)
+" isn't totally infuriating
+nnoremap <C-e> <C-w>
+
 " Tab mappings
 map Oc :tabnext<CR>
 map Od :tabprevious<CR>
