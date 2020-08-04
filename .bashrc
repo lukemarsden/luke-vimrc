@@ -182,3 +182,7 @@ if [ -f ~/.tokens ]; then
 fi
 export BASH_SILENCE_DEPRECATION_WARNING=1
 stty werase ^p
+source ~/pp/pachyderm/etc/contributing/bash_helpers
+export PATH="/home/luke/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
