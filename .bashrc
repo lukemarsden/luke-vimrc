@@ -183,3 +183,9 @@ fi
 export BASH_SILENCE_DEPRECATION_WARNING=1
 stty werase ^p
 export GOPRIVATE="gitlab.mlops.consulting"
+source ~/pp/pachyderm/etc/contributing/bash_helpers
+export PATH="/home/luke/.pyenv/bin:$PATH"
+if `which pyenv`; then
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+fi
