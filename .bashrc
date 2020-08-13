@@ -182,3 +182,4 @@ if [ -f ~/.tokens ]; then
 fi
 export BASH_SILENCE_DEPRECATION_WARNING=1
 stty werase ^p
+export GOPRIVATE="gitlab.mlops.consulting"
