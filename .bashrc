@@ -186,3 +186,4 @@ source ~/pp/pachyderm/etc/contributing/bash_helpers
 export PATH="/home/luke/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+export QT_QPA_PLATFORMTHEME=qt5ct
