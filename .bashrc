@@ -182,8 +182,13 @@ if [ -f ~/.tokens ]; then
 fi
 export BASH_SILENCE_DEPRECATION_WARNING=1
 stty werase ^p
-source ~/pp/pachyderm/etc/contributing/bash_helpers
+export GOPRIVATE="gitlab.mlops.consulting"
+if [ -f ~/pp/pachyderm/etc/contributing/bash_helpers ]; then
+    source ~/pp/pachyderm/etc/contributing/bash_helpers
+fi
 export PATH="/home/luke/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 export QT_QPA_PLATFORMTHEME=qt5ct
+if `which pyenv`; then
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+fi
