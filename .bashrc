@@ -188,7 +188,7 @@ if [ -f ~/pp/pachyderm/etc/contributing/bash_helpers ]; then
 fi
 export PATH="/home/luke/.pyenv/bin:$PATH"
 export QT_QPA_PLATFORMTHEME=qt5ct
-if which pyenv; then
+if which pyenv >/dev/null; then
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
 fi
