@@ -46,6 +46,7 @@ let g:ctags_title=1
 let generate_tags=1
 
 set popt=portrait:n
+au BufNewFile,BufRead *.js set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 au BufNewFile,BufRead *.ts set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 au BufNewFile,BufRead *.rst set wrap
 au BufNewFile,BufRead *.rst set linebreak

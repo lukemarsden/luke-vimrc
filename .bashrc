@@ -183,9 +183,12 @@ fi
 export BASH_SILENCE_DEPRECATION_WARNING=1
 stty werase ^p
 export GOPRIVATE="gitlab.mlops.consulting"
-source ~/pp/pachyderm/etc/contributing/bash_helpers
+if [ -f ~/pp/pachyderm/etc/contributing/bash_helpers ]; then
+    source ~/pp/pachyderm/etc/contributing/bash_helpers
+fi
 export PATH="/home/luke/.pyenv/bin:$PATH"
-if `which pyenv`; then
+export QT_QPA_PLATFORMTHEME=qt5ct
+if which pyenv >/dev/null; then
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
 fi
