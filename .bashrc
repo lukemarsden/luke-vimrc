@@ -203,5 +203,7 @@ export HISTFILE=~/.bash_eternal_history
 # http://superuser.com/questions/20900/bash-history-loss
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-source "$HOME/.cargo/env"
+if [ -d "$HOME/.cargo" ]; then
+    source "$HOME/.cargo/env"
+fi
 alias sessions="echo; tmux list-sessions |cut -d ':' -f 1 |sort; echo"
