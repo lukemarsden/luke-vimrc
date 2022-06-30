@@ -161,12 +161,6 @@ export PATH=/usr/local/go/bin:/usr/lib/go-1.10/bin/:$HOME/gocode/bin:$PATH
 
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/luke/google-cloud-sdk/path.bash.inc' ]; then source '/home/luke/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/luke/google-cloud-sdk/completion.bash.inc' ]; then source '/home/luke/google-cloud-sdk/completion.bash.inc'; fi
-
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 # tabtab source for electron-forge package
@@ -217,3 +211,8 @@ export PATH="$WASMTIME_HOME/bin:$PATH"
 export WASMER_DIR="/home/luke/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
 export GOBIN=$HOME/gocode/bin
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+if [ -d "$HOME/.cargo" ]; then
+    source "$HOME/.cargo/env"
+fi
+alias sessions="echo; tmux list-sessions |cut -d ':' -f 1 |sort; echo"
