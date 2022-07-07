@@ -180,12 +180,12 @@ export GOPRIVATE="gitlab.mlops.consulting"
 if [ -f ~/pp/pachyderm/etc/contributing/bash_helpers ]; then
     source ~/pp/pachyderm/etc/contributing/bash_helpers
 fi
-export PATH="/home/luke/.pyenv/bin:$PATH"
+#export PATH="/home/luke/.pyenv/bin:$PATH"
 export QT_QPA_PLATFORMTHEME=qt5ct
-if which pyenv >/dev/null; then
-    eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
-fi
+#if which pyenv >/dev/null; then
+#    eval "$(pyenv init -)"
+#    eval "$(pyenv virtualenv-init -)"
+#fi
 export PATH=$PATH:/usr/local/kubebuilder/bin
 export PATH="$HOME/.poetry/bin:$PATH"
 
