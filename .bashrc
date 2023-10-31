@@ -207,3 +207,9 @@ if [ -d "$HOME/.cargo" ]; then
     source "$HOME/.cargo/env"
 fi
 alias sessions="echo; tmux list-sessions |cut -d ':' -f 1 |sort; echo"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export SHELL="/bin/bash"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="/opt/homebrew/lib/ruby/gems/3.1.0/bin:$PATH"
