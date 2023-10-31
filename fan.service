@@ -1,0 +1,15 @@
+[Unit]
+Description=Fan
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 /home/luke/luke-vimrc/fan.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+
