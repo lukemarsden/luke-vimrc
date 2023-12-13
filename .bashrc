@@ -98,7 +98,7 @@ export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
 shopt -s histappend
 export PROMPT_COMMAND="history -a"
 
-alias sagi='sudo apt-get install'
+alias sagi='sudo apt-get install -y'
 alias t='~/todo/todo.sh'
 # Make a new line at the start of the file
 alias todo="echo '0a
