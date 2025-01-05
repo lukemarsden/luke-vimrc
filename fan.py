@@ -10,7 +10,10 @@ while True:
     elif temp > 60:
         f.write("level 2")
         print("😎 2")
-    else:
+    elif temp > 55:
         f.write("level 0")
         print("🧊 0")
+    else:
+        f.write("disabled")
+        print("🧊🧊 disabled")
     f.close()
