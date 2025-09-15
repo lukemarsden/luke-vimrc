@@ -176,7 +176,6 @@ export HISTFILE=~/.bash_eternal_history
 # Force prompt to write history after every command.
 # http://superuser.com/questions/20900/bash-history-loss
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
-. "$HOME/.cargo/env"
 
 export WASMTIME_HOME="$HOME/.wasmtime"
 
@@ -187,6 +186,19 @@ export WASMER_DIR="/home/luke/.wasmer"
 export GOBIN=$HOME/gocode/bin
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 if [ -d "$HOME/.cargo" ]; then
-    source "$HOME/.cargo/env"
+    . "$HOME/.cargo/env"
 fi
 alias sessions="echo; tmux list-sessions |cut -d ':' -f 1 |sort; echo"
+
+
+# This alias runs the Cursor Setup Wizard, simplifying installation and configuration.
+# For more details, visit: https://github.com/jorcelinojunior/cursor-setup-wizard
+alias cursor-setup="/home/luke/cursor-setup-wizard/cursor_setup.sh"
+
+
+. "$HOME/.local/bin/env"
+export PATH=$HOME/.local/bin:$PATH
+
+export CLAUDE_CODE_USE_VERTEX=1
+export ANTHROPIC_VERTEX_PROJECT_ID="helixml"
+export CLOUD_ML_REGION="global"
