@@ -202,3 +202,14 @@ export PATH=$HOME/.local/bin:$PATH
 export CLAUDE_CODE_USE_VERTEX=1
 export ANTHROPIC_VERTEX_PROJECT_ID="helixml"
 export CLOUD_ML_REGION="global"
+
+if [ -d "/opt/homebrew" ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export SHELL="/bin/bash"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="/opt/homebrew/lib/ruby/gems/3.1.0/bin:$PATH"
+export TERM=xterm-256color
