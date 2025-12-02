@@ -102,10 +102,10 @@ let g:go_disable_autoinstall = 0
 " autocmd BufWritePre *.go :GoBuild
 
 " Build/Test on save.
-augroup auto_go
-	autocmd!
-	autocmd BufWritePost *.go :GoBuild
-augroup end
+"augroup auto_go
+"	autocmd!
+"	autocmd BufWritePost *.go :GoBuild
+"augroup end
 
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
 au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
