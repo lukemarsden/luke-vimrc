@@ -195,7 +195,6 @@ alias sessions="echo; tmux list-sessions |cut -d ':' -f 1 |sort; echo"
 # For more details, visit: https://github.com/jorcelinojunior/cursor-setup-wizard
 alias cursor-setup="/home/luke/cursor-setup-wizard/cursor_setup.sh"
 
-
 . "$HOME/.local/bin/env"
 export PATH=$HOME/.local/bin:$PATH
 
