@@ -38,8 +38,8 @@ if [ -f .tmux.conf ]; then
 fi
 ln -s luke-vimrc/.tmux.conf
 
-# Ubuntu GNOME setup (not WSL)
-if [[ "$(uname)" == "Linux" ]] && grep -qi ubuntu /etc/os-release 2>/dev/null && ! grep -qi microsoft /proc/version 2>/dev/null; then
+# Ubuntu GNOME desktop setup (not WSL or headless)
+if [[ "$(uname)" == "Linux" ]] && grep -qi ubuntu /etc/os-release 2>/dev/null && ! grep -qi microsoft /proc/version 2>/dev/null && command -v gsettings &>/dev/null && [[ -n "$DISPLAY" || -n "$WAYLAND_DISPLAY" ]]; then
     # Ctrl+Alt+Shift+S to sleep
     gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/sleep/']"
     gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/sleep/ name 'Sleep'
