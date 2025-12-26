@@ -38,4 +38,22 @@ if [ -f .tmux.conf ]; then
 fi
 ln -s luke-vimrc/.tmux.conf
 
+# Ubuntu-specific setup (not WSL)
+if [[ "$(uname)" == "Linux" ]] && grep -qi ubuntu /etc/os-release 2>/dev/null && ! grep -qi microsoft /proc/version 2>/dev/null; then
+    # keyd: remap airplane mode key to sleep (Alt+WLAN)
+    if ! command -v keyd &> /dev/null; then
+        sudo apt-get install -y keyd
+    fi
+    sudo tee /etc/keyd/default.conf << 'EOF'
+[ids]
+*
 
+[main]
+wlan = noop
+
+[alt]
+wlan = sleep
+EOF
+    sudo systemctl restart keyd
+    sudo systemctl enable keyd
+fi
