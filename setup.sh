@@ -38,22 +38,11 @@ if [ -f .tmux.conf ]; then
 fi
 ln -s luke-vimrc/.tmux.conf
 
-# Ubuntu-specific setup (not WSL)
+# Ubuntu GNOME setup (not WSL)
 if [[ "$(uname)" == "Linux" ]] && grep -qi ubuntu /etc/os-release 2>/dev/null && ! grep -qi microsoft /proc/version 2>/dev/null; then
-    # keyd: remap airplane mode key to sleep (Alt+WLAN)
-    if ! command -v keyd &> /dev/null; then
-        sudo apt-get install -y keyd
-    fi
-    sudo tee /etc/keyd/default.conf << 'EOF'
-[ids]
-*
-
-[main]
-wlan = noop
-
-[alt]
-wlan = sleep
-EOF
-    sudo systemctl restart keyd
-    sudo systemctl enable keyd
+    # Ctrl+Alt+Shift+S to sleep
+    gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/sleep/']"
+    gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/sleep/ name 'Sleep'
+    gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/sleep/ command 'systemctl suspend'
+    gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/sleep/ binding '<Control><Alt><Shift>s'
 fi
